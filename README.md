@@ -10,7 +10,7 @@ Telegram message forwarder
 
 ## API Manual
 
-**API Url:** `/v1/message`
+**API Url:** `https://ifwd.dd4e.ru/v1/message`
 
 ### Forward message via POST
 
@@ -26,10 +26,13 @@ Body:
 {
     "token": "your forward token",
     "message": "forwarded message",
-    "format": "'Markdown' or 'HTML'", // optional, default plain text
-    "silent": false // optional, default false
+    "format": "'Markdown' or 'HTML'",
+    "silent": false
 }
 ```
+
+> `format` is optional, default plain text  
+> `silent` is optional, defaul `false`
 
 #### Response
 
@@ -54,8 +57,11 @@ Query params:
 
 - t=`your forward token`
 - m=`forwarded message`
-- f=`'Markdown' or 'HTML'` (optional, default plain text)
-- s=`false` (optional, default false)
+- f=`'Markdown' or 'HTML'`
+- s=`false`
+
+> `format` is optional, default plain text  
+> `silent` is optional, defaul `false`
 
 #### Response
 
