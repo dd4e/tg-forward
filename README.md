@@ -120,3 +120,14 @@ Content-Type: `application/json`
     "ok": true
 }
 ```
+
+#### Forward message via PowerShell
+
+```
+$Uri = 'https://iforward.dd4e.ru/v1/message'
+$body = @{
+    token = "forward token";
+    message = "yor message"
+} | ConvertTo-Json
+Invoke-WebRequest -Uri $Uri -Body $body -Method POST
+```
